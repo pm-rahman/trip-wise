@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
-import SinglePlace from "../(home)/SinglePlace";
 import axios from "axios";
+import SingleBlog from "../(home)/SingleBlog";
 
 const TravelBLogs = () => {
     const [travelBlogs, setTravelBlogs] = useState([])
@@ -17,7 +17,7 @@ const TravelBLogs = () => {
                 <h1 className="text-3xl font-semibold">Travel Blogs</h1>
             </div>
             <div className="grid md:grid-cols-3 gap-4 mt-8">
-                {travelBlogs?.map(blog => <SinglePlace key={blog._id} article={blog} />)}
+                {travelBlogs?.map(blog => <SingleBlog key={blog._id} article={blog} />)}
             </div>
         </div>
     );

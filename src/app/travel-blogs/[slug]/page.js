@@ -14,7 +14,7 @@ const SingleTravelBlog = () => {
     },[slug])
     return (
         <div>
-            <SingleBlog blog={blog} />
+            <SingleBlog blog={blog} slug={slug} />
         </div>
     );
 };

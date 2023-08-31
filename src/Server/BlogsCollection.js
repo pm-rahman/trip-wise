@@ -26,13 +26,27 @@ export const getBlogByCategory = async (category) => {
 // post
 export const addBLogInDb = async (blog) => {
     const db = await DbConnect();
-    const blogsCollection = db.collection('blogs');
-    return blogsCollection.insertOne(blog);
+    const blogCollection = db.collection('blogs');
+    return blogCollection.insertOne(blog);
+}
+// put
+export const updateBlogById = async (id, updateBlog) => {
+    const db = await DbConnect();
+    const blogCollection = db.collection('blogs');
+    const query = { _id: new ObjectId(id) };
+    const updateDoc = {
+        $set: {
+            title: updateBlog?.title,
+            paraTitle: updateBlog?.paraTitle,
+            blog: updateBlog?.blog
+        }
+    }
+    return blogCollection.updateOne(query, updateDoc);
 }
 // delete
 export const deleteBlogById = async (id) => {
     const db = await DbConnect();
-    const blogCollection = db.collection('blog');
+    const blogCollection = db.collection('blogs');
     const query = { _id: new ObjectId(id) };
     return blogCollection.deleteOne(query);
 }

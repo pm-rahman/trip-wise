@@ -43,6 +43,7 @@ const AddBlog = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
+                replace('/')
             })
             .catch(error => {
                 console.log(error);

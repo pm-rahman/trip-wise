@@ -1,12 +1,14 @@
 import React from 'react';
 import HeroSlider from './HeroSlider';
-import BestPlaces from './BestPlaces';
+import BestBlogs from './BestBlogs';
+import About from './About';
 
 const HomePage = () => {
     return (
         <div>
-            <HeroSlider/>
-            <BestPlaces/>
+            <HeroSlider />
+            <BestBlogs />
+            <About />
         </div>
     );
 };

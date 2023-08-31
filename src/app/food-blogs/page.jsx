@@ -3,7 +3,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import SinglePlace from "../(home)/SinglePlace";
+import SingleBlog from "../(home)/SingleBlog";
 
 const FoodBlogs = () => {
     const [foodBlogs,setFoodBlogs]=useState([])
@@ -19,7 +19,7 @@ const FoodBlogs = () => {
                 <h1 className="text-3xl font-semibold">Food Blogs</h1>
             </div>
             <div className="grid md:grid-cols-3 gap-4 mt-8">
-                {foodBlogs?.map(blog=><SinglePlace key={blog._id} article={blog} />)}
+                {foodBlogs?.map(blog=><SingleBlog key={blog._id} article={blog} />)}
             </div>
         </div>
     );

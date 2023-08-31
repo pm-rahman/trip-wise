@@ -1,5 +1,5 @@
 import Navbar from '@/Component/Navbar'
-import './globals.css'
+import './globals.scss'
 import Footer from '@/Component/Footer'
 import Providers from '@/Providers'
 
